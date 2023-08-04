@@ -21,8 +21,8 @@ time.sleep(5)
 
 search_info = get_search_info()
 
-until_page = int(search_info.until_page)
-current_page = int(search_info.start_page)
+until_page = search_info.until_page
+current_page = search_info.start_page
 
 while current_page <= until_page:
     search_page(driver, current_page)
