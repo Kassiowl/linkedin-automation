@@ -20,18 +20,23 @@ def send_connection(driver: webdriver):
 
     div_class = 'search-results-container'
 
-    div_container = driver.find_element(By.CLASS_NAME, div_class)
+    div_container_result = driver.find_element(By.CLASS_NAME, div_class)
 
-    buttons = div_container.find_elements(By.XPATH, ".//button")
+    people_container_name = './/ul'
+
+    people_list = div_container_result.find_element(By.XPATH, people_container_name)
+
+    buttons = people_list.find_elements(By.XPATH, ".//button")
 
     button_connect_span_text = 'Conectar'
     
     for button in buttons:
         try:
-            button_span_text = button.find_element(By.XPATH, './/span').text
+            button_span_text = button.find_element(By.CLASS_NAME, 'artdeco-button__text').text
             if button_connect_span_text in button_span_text:
                 button.click()
                 click_button_inside_modal(driver)
-        except:
+        except Exception as e:
+            print(e)
             continue
 
