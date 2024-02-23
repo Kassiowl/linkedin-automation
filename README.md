@@ -6,6 +6,7 @@
 ### RoadMap
 
 - [x] Connection Request Automation
+- [ ] Send Message Automation
 - [ ] Send Resume(Curriculum) automation
 
 
