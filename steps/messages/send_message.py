@@ -3,12 +3,15 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 from repository.get_message import get_message
-
+from selenium.webdriver.common.keys import Keys
 
 def send_message_inside_box(driver: webdriver):
     message = get_message()
     active_element = driver.switch_to.active_element
-    active_element.send_keys(message.message_string)
+    for text in message.message_string:
+        active_element.send_keys(text)
+        active_element.send_keys(Keys.ENTER)
+        active_element.send_keys(Keys.ENTER)
 
     button_xpath = '/html/body/div[5]/div[4]/aside[1]/div[2]/div[1]/div[2]/div/form/footer/div[2]/div[1]/button'
     time.sleep(5)

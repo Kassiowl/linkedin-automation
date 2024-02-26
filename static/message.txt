@@ -1,1 +1,43 @@
-This is your message
+Prezado Recrutador
+
+Mando essa mensagem para expressar meu interesse em uma posição de Programador Júnior, procuro a primeira oportunidade de entrar no mercado
+depois de completar minha formação de bacharel em Engenharia de Software pela ucb - Universidade Católica de Brasília. Durante minha formação, adquiri habilidades sólidas em arquitetura de software, arquitetura limpa e implementação de boas práticas de código. Além disso, desenvolvi uma versatilidade considerável, trabalhando com diversos frameworks e tecnologias relevantes para a área. Minha abordagem autodidata me permitiu manter-me em constante aprendizado com através da leitura constante de livros e artigos. Além da prática constante em projetos individuais 
+Anseio por uma oportunidade para mostrar como minhas habilidades e experiências podem agregar valor à sua equipe. Muito obrigado pela consideração 
+No meu estágio tive 1 ano de experiência principalmente em
+
+python/django em web
+
+Python em automação de tarefas.
+
+javascript
+
+tendo contato e feito também projetos
+
+React
+
+Blazor
+
+Java SpringBoot
+
+Node
+
+AWS e Microsserviços
+
+Python Fast Api
+
+Por conta da minha versatilidade,
+também posso aprender qualquer tecnologia necessária rapidamente,
+preciso apenas de um pequeno tempo para ler a documentação e entender o básico da tecnologia.
+Se quiser saber mais sobre mim,
+tenho meu site de portfólio, onde o deploy foi feito na AWS utilizando AWS Lambda,
+CloudFront e S3, esse site foi feito utilizando React no front e Python Fast Api no Back
+
+Link do site da aws: https://d2gmdh753g1m67.cloudfront.net/
+
+Meus Artigos no Medium: https://medium.com/@kassiowl34
+
+Trabalhei com um desenvolvedor sênior, se quiser checar minhas habilidades, esse é o linkedin dele:
+
+Obrigado e agradeço desde já
+
+meu e-mail: kassiowl34@gmail.com
