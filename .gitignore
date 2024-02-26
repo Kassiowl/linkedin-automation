@@ -7,3 +7,5 @@ pip-delete-this-directory.txt
 
 .coverage
 .cache
+
+geckodriver.log
