@@ -21,7 +21,6 @@ current_page = search_info.start_page
 
 driver = start_driver()
 login_step(driver)
-time.sleep(20)
 while current_page <= until_page:
     time.sleep(5)
     go_to_send_message_main_page(driver, current_page)
