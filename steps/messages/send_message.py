@@ -7,7 +7,11 @@ from selenium.webdriver.common.keys import Keys
 
 def send_message_inside_box(driver: webdriver):
     message = get_message()
+    
+    time.sleep(2)
+
     active_element = driver.switch_to.active_element
+
     for text in message.message_string:
         active_element.send_keys(text)
         active_element.send_keys(Keys.ENTER)
@@ -17,6 +21,18 @@ def send_message_inside_box(driver: webdriver):
     time.sleep(5)
     button = driver.find_element(By.XPATH, button_xpath)
     button.click()
+
+    time.sleep(2)
+    box_element = driver.find_element(By.XPATH, "//div[contains(@class,'msg-overlay-conversation-bubble')]")
+    buttons = box_element.find_elements(By.TAG_NAME, "button")
+    
+    close_button_span = 'Fechar conversa'
+    for button in buttons:
+        button_span_text = button.find_element(By.TAG_NAME, 'span')
+        if close_button_span in button_span_text.text:
+            button.click()
+
+    
 def send_message(driver: webdriver):
     seconds_to_wait = 5
     driver.implicitly_wait(seconds_to_wait)
@@ -31,12 +47,12 @@ def send_message(driver: webdriver):
 
     buttons = people_list.find_elements(By.XPATH, ".//button")
 
-    button_connect_span_text = 'Enviar mensagem'
+    button_send_message_span_text = 'Enviar mensagem'
     
     for button in buttons:
         try:
             button_span_text = button.find_element(By.CLASS_NAME, 'artdeco-button__text').text
-            if button_connect_span_text in button_span_text:
+            if button_send_message_span_text in button_span_text:
                 button.click()
                 send_message_inside_box(driver)
 
