@@ -17,13 +17,14 @@ def send_message_inside_box(driver: webdriver):
         active_element.send_keys(Keys.ENTER)
         active_element.send_keys(Keys.ENTER)
 
-    button_xpath = '/html/body/div[5]/div[4]/aside[1]/div[2]/div[1]/div[2]/div/form/footer/div[2]/div[1]/button'
+    box_element = driver.find_element(By.XPATH, "//div[contains(@class,'msg-overlay-conversation-bubble')]")
+    
+    button_class = 'msg-form__send-button'
     time.sleep(5)
-    button = driver.find_element(By.XPATH, button_xpath)
+    button = box_element.find_element(By.CLASS_NAME, button_class)
     button.click()
 
-    time.sleep(2)
-    box_element = driver.find_element(By.XPATH, "//div[contains(@class,'msg-overlay-conversation-bubble')]")
+    time.sleep(10)
     buttons = box_element.find_elements(By.TAG_NAME, "button")
     
     close_button_span = 'Fechar conversa'
