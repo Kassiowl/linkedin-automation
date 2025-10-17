@@ -16,7 +16,7 @@ credentials = get_credentials()
 driver = start_driver()
 time.sleep(5)
 # login_step(driver)
-time.sleep(20)
+time.sleep(10)
 
 search_info = get_search_info()
 
